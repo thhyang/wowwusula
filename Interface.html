@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<title>WoW User Interface @ Terence</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Calibri, Verdana, Arial, Arial Unicode MS, sans-serif;
+}
+.style1 {color: #CCCCCC}
+.white-large {color: #FFFFFF; font-size: large; }
+.style3 {font-size: large}
+.notice {
+	font-size: large;
+	color: #FF0000;
+}
+.style1 a {
+	color: #FFCCFF;
+}
+.extra-note {
+	font-size: small;
+	color: #999999;
+}
+-->
+</style></head>
+
+<body>
+<table width="90%" cellpadding="4" cellspacing="0">
+  <col width="72" />
+  <tr>
+    <td bgcolor="#6666FF" class="style1">Wusula's Package </td>
+    <td bgcolor="#6666FF" class="style1">&nbsp;</td>
+    <td bgcolor="#6666FF" class="style1">Last Update: 2009-Nov-12 (after 3.2.2)</td>
+  </tr>
+  <tr>
+    <td bgcolor="#6666FF" class="style1">&nbsp;</td>
+    <td bgcolor="#6666FF" class="style1">&nbsp;</td>
+    <td bgcolor="#6666FF" class="style1"><a href="http://www.box.net/files#/files/0/f/33143444/tools" target="_blank">Download(Box)</a> <a href="http://thhyang.myweb.hinet.net/wow/Interface.rar" target="_blank">Download(H)</a> <a href="http://tylab.no-ip.info/wow/Interface.rar" target="_blank">Download(E)</a> <a href="http://www.websitegoodies.com/guestbook.php?a=view&amp;id=177834" target="_blank">更新留言版</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3"><p><span class="notice">※注意：剛進去先設定Broker2Fubar，因為有些東西跟FubarPlugin重複了，只要保留Auditor和PitBull4就好！</span><br />
+      △三角表示尚未更新到WOW最新版3.2.0不過功能似乎沒問題<br />
+      ？問號表示部分功能似乎有問題<br />
+      ☆星星表示有職業取向<br />
+      。小圈表示是Library可能用在不同插件<br />
+    ※刪除線表示暫時由另一個取代，或許將來會拿回來用</p>
+    <p class="notice">如果你要將PitBull4設定成類似我的設定，可將壓縮檔中的PitBull4.lua放到&lt;WOW資料夾&gt;/WTF/Account/&lt;你的帳號&gt;/SavedVariables這個資料夾中。</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#CCCCCC">
+  <col width="72" />
+  <tr bgcolor="#6699FF" class="white-large">
+    <td><div align="center">[NAME]</div></td>
+    <td><div align="center">[MARK]</div></td>
+    <td><div align="center">[DESCRIPTION]</div></td>
+    <td><div align="center">[CATEGORY]</div></td>
+    <td><div align="center">[LINK]</div></td>
+    <td>      <div align="center"><span class="style1"><span class="style1"><span class="style3"><span class="style3"></span></span></span></span>
+       [Note]  </div></td></tr>
+  <tr>
+    <td>!!!Libs</td>
+    <td>。</td>
+    <td>主要的函式庫。</td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>!!Warmup</td>
+    <td>&nbsp;</td>
+    <td>觀察各addon載入時耗費的時間和記憶體。 </td>
+    <td>Debug</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>!BugGrabber</td>
+    <td>&nbsp;</td>
+    <td>整理addon的錯誤訊息。 </td>
+    <td>Debug</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Ace2</td>
+    <td>。</td>
+    <td>舊版Ace函式庫。(但還是有addon用到)</td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Ace3</td>
+    <td>。</td>
+    <td>Ace函式庫。</td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ACP</td>
+    <td>&nbsp;</td>
+    <td>遊戲中的addon管理工具。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AddonLoader</td>
+    <td>&nbsp;</td>
+    <td>動態載入addon的工具。 </td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AtlasLoot</td>
+    <td>&nbsp;</td>
+    <td><p>提供各副本王的掉落物資訊。</p>
+    <p class="extra-note">包含：<br />
+      AtlasLoot<br />
+      AtlasLoot_BurningCrusade<br />
+      AtlasLoot_Crafting<br />
+      AtlasLoot_OriginalWoW<br />
+      AtlasLoot_WorldEvents<br />
+      AtlasLoot_WrathoftheLichKing<br />
+    AtlasLootFu</p></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Auditor2</td>
+    <td>&nbsp;</td>
+    <td>記帳系統。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AuldLangSyne</td>
+    <td>&nbsp;</td>
+    <td>朋友、公會成員管理系統。可同步各角色的朋友列表。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AutoProfitX</td>
+    <td>&nbsp;</td>
+    <td>一鍵賣垃圾。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Babble-2.2</td>
+    <td>。</td>
+    <td><p>方便開發用，提供各國語言的字串資料，已被3.0取代了，但還是有些addon在使用它。</p>
+    <p class="extra-note">包含：<br />
+      Babble-2.2<br />
+      Babble-Boss-2.2<br />
+      Babble-Class-2.2<br />
+      Babble-Faction-2.2<br />
+      Babble-Fish-2.2<br />
+      Babble-Gas-2.2<br />
+      Babble-Herbs-2.2<br />
+      Babble-Inventory-2.2<br />
+      Babble-Mount-2.2<br />
+      Babble-Ore-2.2<br />
+      Babble-Quest-2.2<br />
+      Babble-Race-2.2<br />
+      Babble-Spell-2.2<br />
+      Babble-SpellTree-2.2<br />
+      Babble-Tradeskill-2.2<br />
+      Babble-Trainer-2.2<br />
+      Babble-Vendor-2.2<br />
+    Babble-Zone-2.2</p></td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Bagnon</td>
+    <td>&nbsp;</td>
+    <td><p>改良包包。紀錄各角色包包和銀行的內容。</p>
+    <p class="extra-note">包含：<br />
+      Bagnon<br />
+      Bagnon_Config<br />
+      Bagnon_Forever<br />
+    Bagnon_Tooltips</p></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Bartender4</td>
+    <td>&nbsp;</td>
+    <td>改良快捷列、工具列。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>BetterKeyBinding</td>
+    <td>&nbsp;</td>
+    <td>改良快捷鍵設定視窗。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Broker_Auditor</td>
+    <td>&nbsp;</td>
+    <td>將Auditor顯示在DataBroke上。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Broker2FuBar</td>
+    <td>&nbsp;</td>
+    <td>將使用LIbDataBroke的addon改成顯示在Fubar上。(但有些addon兩種都會顯示，所以就要設定一下)</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>BugSack</td>
+    <td>&nbsp;</td>
+    <td>顯示!Buggrabber的內容。</td>
+    <td>Debug</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Cartographer</td>
+    <td>&nbsp;</td>
+    <td><p>改良地圖視窗。提供副本地圖、一些資訊點、任務點。</p>
+    <p class="extra-note">包含：<br />
+    Cartographer<br />
+      Cartographer_Battlegrounds<br />
+      Cartographer_Coordinates<br />
+      Cartographer_Foglight<br />
+      Cartographer_GroupColors<br />
+      Cartographer_GuildPositions<br />
+      Cartographer_InstanceLoot<br />
+      Cartographer_InstanceMaps<br />
+      Cartographer_InstanceNotes<br />
+      Cartographer_LookNFeel<br />
+      Cartographer_Notes<br />
+      Cartographer_POI<br />
+      Cartographer_QuestInfo<br />
+      Cartographer_Waypoints<br />
+    Cartographer_ZoneInfo</p></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Chatter</td>
+    <td>&nbsp;</td>
+    <td>改良聊天視窗。(我拿掉了一些會改變外觀的功能)</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ClassLoot</td>
+    <td>&nbsp;</td>
+    <td>提供部份裝備比較適合哪個職業的評比。(避免抓馬)</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DBM</td>
+    <td>&nbsp;</td>
+    <td><p>副本警報系統。</p>
+    <p class="extra-note">包含：<br />
+      DBM-Battlegrounds<br />
+      DBM-ChamberOfAspects<br />
+      DBM-Coliseum<br />
+      DBM-Core<br />
+      DBM-EyeOfEternity<br />
+      DBM-GUI<br />
+      DBM-Icecrown<br />
+      DBM-Naxx<br />
+      DBM-Onyxia<br />
+      DBM-Party-WotLK<br />
+    DBM-Ulduar</p></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Decursive</td>
+    <td>&nbsp;</td>
+    <td>打地鼠解debuff。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DetachedMiniButtons</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DeuceCommander</td>
+    <td>&nbsp;</td>
+    <td>Ace系列addon的整合管理介面。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DoTimer</td>
+    <td>&nbsp;</td>
+    <td><p>各式法術的監視系統。</p>
+    <p class="extra-note">包含：<br />
+    DoTimer<br />
+    DoTimer_Options</p></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Examiner</td>
+    <td>&nbsp;</td>
+    <td>改良觀察視窗。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>FishingAce</td>
+    <td>&nbsp;</td>
+    <td>釣魚助手。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Fizzle</td>
+    <td>&nbsp;</td>
+    <td>在個人裝備視窗用的裝備格子顯示裝備的耐用度。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_BagFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_ClockFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_DurabilityFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_ExperienceFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_FactionsFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_FuXPFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_GroupFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_HeyFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_LocationFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_PerformanceFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_PetInfoFu</td>
+    <td>☆</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_QuestsFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_RecountFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_RegenFu</td>
+    <td>☆</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_RestFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bordercolor="#9966FF">
+    <td>FuBar_VolumeFu</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>GatherMate</td>
+    <td>&nbsp;</td>
+    <td>採集助手。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>GatherMate_Data</td>
+    <td>&nbsp;</td>
+    <td>提供GatherMate資料，每週更新。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>IHML</td>
+    <td>&nbsp;</td>
+    <td>提供一些每日任務或是副本使用物品的巨集。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InFlight</td>
+    <td>&nbsp;</td>
+    <td>飛行計時器、鳥點紀錄。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InFlight_Load</td>
+    <td>&nbsp;</td>
+    <td>用來載入InFlight。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InspectEquip</td>
+    <td>&nbsp;</td>
+    <td>顯示個人或觀察視窗的裝備出處整理列表。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ItemRack</td>
+    <td>&nbsp;</td>
+    <td>換裝管理系統。提供單一個裝備位置的快速替換工具列。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ItemRackOptions</td>
+    <td>&nbsp;</td>
+    <td>用來設定ItemRack。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>LibPeriodicTable-3.1</td>
+    <td>。</td>
+    <td><p>提供各式各樣物品資料的函式庫資料。</p>
+    <p class="extra-note">包含：<br />
+    LibPeriodicTable-3.1<br />
+      LibPeriodicTable-3.1-AutoBar<br />
+      LibPeriodicTable-3.1-ClassSpell<br />
+      LibPeriodicTable-3.1-Consumable<br />
+      LibPeriodicTable-3.1-CurrencyItems<br />
+      LibPeriodicTable-3.1-Gear<br />
+      LibPeriodicTable-3.1-GearSet<br />
+      LibPeriodicTable-3.1-InstanceLoot<br />
+      LibPeriodicTable-3.1-InstanceLootHeroic<br />
+      LibPeriodicTable-3.1-Misc<br />
+      LibPeriodicTable-3.1-Reputation<br />
+      LibPeriodicTable-3.1-Tradeskill<br />
+      LibPeriodicTable-3.1-TradeskillLevels<br />
+    LibPeriodicTable-3.1-TradeskillResultMats</p></td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>LockSmith</td>
+    <td>☆</td>
+    <td>盜賊開鎖助手。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Mendeleev</td>
+    <td>&nbsp;</td>
+    <td>顯示物品的用途、出處。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>MikScrollingBattleText</td>
+    <td>&nbsp;</td>
+    <td>改良畫面中的跳出文字訊息。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>MobHealth</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>MSBTOptions</td>
+    <td>&nbsp;</td>
+    <td>設定MikScrollingBattleText。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>NugEnergy</td>
+    <td>☆</td>
+    <td>盜賊能量列。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Numen</td>
+    <td>☆</td>
+    <td>薩滿圖騰列。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Omen</td>
+    <td>&nbsp;</td>
+    <td>威脅值監視。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>OmniCC</td>
+    <td>&nbsp;</td>
+    <td>提供快捷列的法術CD倒數。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>OmniCC_Options</td>
+    <td>&nbsp;</td>
+    <td>設定OmniCC。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>OmniCC_Shine</td>
+    <td>&nbsp;</td>
+    <td>讓OmniCC的CD結束時發出閃光特效。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>PitBull4</td>
+    <td>&nbsp;</td>
+    <td>改良頭像框架(Unite Frames)。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>PlayerLinkMenu</td>
+    <td>&nbsp;</td>
+    <td>增強聊天視窗在別人名字按右鍵的選單。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Postal</td>
+    <td>&nbsp;</td>
+    <td>改良郵件系統。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Quartz</td>
+    <td>&nbsp;</td>
+    <td>施法條改良。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>QuestHelper</td>
+    <td>&nbsp;</td>
+    <td>任務助手。<span class="notice">(佔用記憶體大)</span></td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RaidAlerter</td>
+    <td>&nbsp;</td>
+    <td>組隊或團隊時提供警報。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RaidTracker</td>
+    <td>&nbsp;</td>
+    <td>追蹤個人、組隊與團隊的拾取紀錄。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RatingBuster</td>
+    <td>&nbsp;</td>
+    <td>顯示裝備對於目前裝備的詳細屬性影響值。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Recount</td>
+    <td>&nbsp;</td>
+    <td>傷害量、治療量的統計工具。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RecountGuessedAbsorbs</td>
+    <td>&nbsp;</td>
+    <td>提供Recount吸收傷害的數值統計。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RunePack</td>
+    <td>☆</td>
+    <td>改善DK的符文顯示。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SeriousBuffTimers</td>
+    <td>&nbsp;</td>
+    <td>讓系統預設的Buff顯示較詳細的時間。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SharedMedia</td>
+    <td>。</td>
+    <td>提供一些額外的貼圖素材。需要LibSharedMedia。</td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>simpleMinimap</td>
+    <td>&nbsp;</td>
+    <td>改良小地圖。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SpecialEvents-2.0</td>
+    <td>。</td>
+    <td><p>提供遊戲中各種Event的整理和應用。 </p>
+    <p class="extra-note">包含：<br />
+    SpecialEvents-Aura-2.0<br />
+      SpecialEvents-Bags-2.0<br />
+      SpecialEventsEmbed<br />
+      SpecialEvents-Equipped-2.0<br />
+      SpecialEvents-LearnSpell-2.0<br />
+      SpecialEvents-Loot-1.0<br />
+      SpecialEvents-Mail-2.0<br />
+      SpecialEvents-Mount-2.0<br />
+    SpecialEvents-Movement-2.0</p></td>
+    <td>Library</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Talented</td>
+    <td>&nbsp;</td>
+    <td>改良天賦視窗，可以事先輸入範本然後再套用。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Talented_GlyphFrame</td>
+    <td>&nbsp;</td>
+    <td>Talented的雕紋介面。(可不啟用)</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Talented_Loader</td>
+    <td>&nbsp;</td>
+    <td>動態載入Talented。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Talented_SpecTabs</td>
+    <td>&nbsp;</td>
+    <td>Talented的</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TankPoints</td>
+    <td>☆</td>
+    <td>顯示裝備的坦克屬性評分。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TipTac</td>
+    <td>&nbsp;</td>
+    <td>改善tooltip的外觀、內容、位置。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TipTacOptions</td>
+    <td>&nbsp;</td>
+    <td>設定TipTac。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TipTacTalents</td>
+    <td>&nbsp;</td>
+    <td>讓TipTac可以顯示指到目標的天賦。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>XLoot</td>
+    <td>&nbsp;</td>
+    <td>改善拾取視窗。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>XLootMonitor</td>
+    <td>&nbsp;</td>
+    <td>整理&quot;最近&quot;的拾取紀錄。需要XLoot。</td>
+    <td>&nbsp;</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

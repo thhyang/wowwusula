@@ -1,1 +1,1213 @@
-"My GitHub Page" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<title>WoW User Interface @ Terence</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Calibri, Verdana, Arial, Arial Unicode MS, sans-serif;
+}
+.grey {color: #CCCCCC}
+.white-large {color: #FFFFFF; font-size: large; }
+.delete {
+	color: #666666;
+	text-decoration: line-through;
+}
+.notice {
+	font-size: large;
+	color: #FF0000;
+}
+.grey a {
+	color: #FFCCFF;
+}
+.extra-note {
+	font-size: small;
+	color: #999999;
+}
+tr.group td {
+	background-color: #FFE;
+}
+tr.group-delete td {
+	background-color: #FFE;
+	color: #666666;
+	text-decoration: line-through;
+}
+
+-->
+</style>
+</head>
+<body>
+<table width="90%" cellpadding="4" cellspacing="0">
+  <col width="72" />
+  <tr>
+    <td bgcolor="#6666FF" class="grey">Wusula's Package </td>
+    <td bgcolor="#6666FF" class="grey">&nbsp;</td>
+    <td bgcolor="#6666FF" class="grey">Last Update: 2013-Oct-14 (after 5.4.0) <a href="http://www.websitegoodies.com/guestbook.php?a=view&amp;id=177834" target="_blank">更新留言版</a></td>
+  </tr>
+  <tr>
+    <td bgcolor="#6666FF" class="grey">&nbsp;</td>
+    <td bgcolor="#6666FF" class="grey">&nbsp;</td>
+    <td bgcolor="#6666FF" class="grey"><a href="http://dl.dropbox.com/u/15166630/Interface.rar" target="_blank">Download(DropBox)</a> <a href="http://thhyang.myweb.hinet.net/wow/Interface.rar" target="_blank" class="delete">Download(H)</a> <a href="https://app.box.com/s/vqq44hozomo1fva9fdmr" target="_blank">Download(Box.net)</a> <a href="https://dl.dropbox.com/u/15166630/InterfaceX.rar" target="_blank">Download(XPerl)</a> <a href="https://dl.dropboxusercontent.com/u/15166630/InterfaceE.rar" target="_blank">Download(Enigma)</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3"><p><br />
+        △三角表示未更新到WOW最新版5.4.x不過功能似乎沒問題<br />
+        ？問號表示部分功能似乎有問題<br />
+        ☆星星表示有職業取向<br />
+        。小圈表示是Library可能用在不同插件<br />
+        ※刪除線表示暫時由另一個取代，或許將來會拿回來用<br />
+        ※大多addon都可從esc的介面-&gt;插件裡設定，或是bar上按右鍵可設定。能用指令的話，會寫在Note。 </p>
+      <p>
+      <table border=0>
+        <tr>
+          <td><img src=http://thhyang.myweb.hinet.net/wow/WoWScrnShot_2.jpg></td>
+          <td><a href=http://thhyang.myweb.hinet.net/wow/WoWScrnShot_1.jpg target=_blank class="delete">10R畫面</a><br />
+		    <a href=http://thhyang.myweb.hinet.net/wow/WoWScrnShot_25R.jpg target=_blank class="delete">25R畫面</a><br />
+            <a href=http://thhyang.myweb.hinet.net/wow/WoWScrnShot_3.jpg target=_blank> 組隊畫面</a></td>
+        </tr>
+      </table>
+      </p>
+      <p class="notice">如果你要將PitBull4和Healbot設定成類似我的設定，可將壓縮檔中的PitBull4.lua和Healbot.lua放到&lt;WOW資料夾&gt;/WTF/Account/&lt;你的帳號&gt;/SavedVariables這個資料夾中。<br />
+      目前我的團隊介面是使用系統內建的，故不另提供參考介面。</p>
+      <p>現在提供三種UnitFrames，分別提供不同的下載點。第一種預設是PitBull，就是上圖表現出來的樣子。</p>
+      <p>另一種是用傳統WOW的UnitFrames改良之後的EN_UnitFrames，（截圖：<a href="http://thhyang.myweb.hinet.net/wow/WoWScrnShot_suf.jpg" target="_blank">組隊</a>、<a href="http://thhyang.myweb.hinet.net/wow/WoWScrnShot_suf_10R.jpg" target="_blank" class="delete">10R</a>），這一組我還搭配了StatusBars以便已經習慣血條在中間的人使用。只要在選人物的插件選單把<a href="http://thhyang.myweb.hinet.net/wow/WoWScrnShot_Addons_P.jpg" target="_blank">PitBull核心模組關掉</a>，然後把<a href="http://thhyang.myweb.hinet.net/wow/WoWScrnShot_Addons_S.jpg" target="_blank">EnigmaUnitFrames和StatusBars2打開</a>，就可以了。<span class="notice">使用EN_UnitFrames的時候請記得先將設定(/euf)中隊伍訊息的「使用傳統隊伍介面」勾選，才會顯示隊伍介面。</span></p>
+    <p>最後一種UnitFrames，XPerl。只要下載XPerl那個版本就可以了。配置可複製Xperl.lua過去用，但是要手動選擇main或raid的設定。主要也只是順應上方的bar將一些往下移動而已。</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#CCCCCC">
+  <col width="72" />
+  <tr bgcolor="#33CC99">
+    <td colspan="5" class="white-large">[General Addons]</td>
+  </tr>
+  <tr bgcolor="#6699FF" class="white-large">
+    <td><div align="center">[NAME]</div></td>
+    <td><div align="center">[MARK]</div></td>
+    <td><div align="center">[DESCRIPTION]</div></td>
+    <td><div align="center">[LINK]</div></td>
+    <td><div align="center">[Note]</div></td>
+  </tr>
+  <tr>
+    <td>!!!Libs</td>
+    <td>。</td>
+    <td>主要的函式庫。包含很多wowace的addon共用的函式庫。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>!!Warmup</td>
+    <td>△</td>
+    <td>觀察各addon載入時耗費的時間和記憶體。 </td>
+    <td>＠</td>
+    <td>/wu</td>
+  </tr>
+  <tr>
+    <td>!BugGrabber</td>
+    <td>&nbsp;</td>
+    <td>整理並紀錄addon的錯誤訊息。 </td>
+    <td><a href="http://www.wowace.com/addons/bug-grabber/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Ace2</td>
+    <td>。△</td>
+    <td>舊版Ace函式庫。(但還是有addon用到)</td>
+    <td><a href="http://www.wowace.com/addons/ace2/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Ace3</td>
+    <td>。</td>
+    <td>Ace函式庫。</td>
+    <td><a href="http://www.wowace.com/addons/ace3/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ACP</td>
+    <td>&nbsp;</td>
+    <td>遊戲中的addon管理工具。</td>
+    <td><a href="http://www.wowace.com/addons/acp/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AddonLoader</td>
+    <td>&nbsp;</td>
+    <td>動態載入addon的工具。 </td>
+    <td><a href="http://www.wowace.com/addons/addon-loader/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AtlasLoot</td>
+    <td>&nbsp;</td>
+    <td><p>提供各副本王的掉落物、套裝、專業技能物品資訊。</p>
+      <p class="extra-note">包含：<br />
+        AtlasLoot<br />
+        AtlasLoot_BurningCrusade<br />
+        AtlasLoot_Crafting<br />
+        AtlasLoot_OriginalWoW<br />
+        AtlasLoot_WorldEvents<br />
+        AtlasLoot_WrathoftheLichKing<br />
+        (AtlasLootFu 刪了 因為內建LDB 現在也不用FuBar)</p></td>
+    <td><a href="http://www.wowace.com/addons/atlasloot-enhanced/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>AuctionLite</td>
+    <td>&nbsp;</td>
+    <td>拍賣場強化。提供物品的單價、買價的歷史紀錄、物品可以放到AH賣多少錢。</td>
+    <td><a href="http://www.wowace.com/addons/auctionlite/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Auditor2</td>
+    <td>△</td>
+    <td><p>記帳工具。</p>
+    <p class="extra-note">包含：<br />
+      Auditor2<br />
+      Broker_Auditor (用DataBroker方式呈現) </p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info5429-Auditor.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>AuldLangSyne</td>
+    <td>&nbsp;</td>
+    <td>朋友、公會成員管理工具。可同步各角色的朋友列表。<br />
+      (以Fubar方式呈現)
+        <p class="extra-note">包含：<br />
+          AuldLangSyne<br />
+          AuldLangSyne_Backup<br />
+          AuldLangSyne_FriendList<br />
+          AuldLangSyne_Fu<br />
+          AuldLangSyne_GuildList<br />
+          AuldLangSyne_Info<br />
+          AuldLangSyne_Note<br />
+          AuldLangSyne_Pane<br />
+      AuldLangSyne_Sync</p></td>
+    <td><a href="http://www.wowace.com/addons/auld-lang-syne/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>AutoProfitX</td>
+    <td>△</td>
+    <td>一鍵賣垃圾。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/project-13443.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Bagnon</td>
+    <td>&nbsp;</td>
+    <td><p>整合包包、物品搜尋。紀錄各角色包包和銀行的內容。</p>
+      <p class="extra-note">包含：<br />
+        Bagnon<br />
+        Bagnon_Config<br />
+        Bagnon_GuildBank<br />
+        Bagnon_VoidStorage<br />
+        BagBrother</p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info4459.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>BankItems</td>
+    <td>△</td>
+    <td>紀錄各角色背包、銀行、公會銀行的東西和信箱沒收進來的東西。<br />
+      (按鈕以Fubar呈現)<br />
+      (物品提示訊息會顯示銀行裡面有幾個的資料，Bagnon也會顯示，可以擇一關閉)</td>
+    <td><a href="http://www.wowace.com/addons/bank-items/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Bartender4</td>
+    <td>&nbsp;</td>
+    <td>改良快捷列、工具列。</td>
+    <td><a href="http://www.wowace.com/addons/bartender4/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>BetterQuest</td>
+    <td>&nbsp;</td>
+    <td>任務監控。(自動任務追蹤、任務進度通報)<br />
+      進入後可先把tracker的full和tracked都關掉，僅改善內建任務追蹤介面即可。<br /> 
+    (Fubar_QuestFu作者做的另一個addon，他說他不更新QuestFu了)</td>
+    <td><a href="http://www.wowace.com/addons/better-quest/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>BetterKeyBinding</td>
+    <td>△</td>
+    <td>改良快捷鍵設定視窗。</td>
+    <td><a href="http://www.curse.com/addons/wow/betterkeybinding" target="_parent">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>ChocolateBarBar</td>
+    <td>&nbsp;</td>
+    <td><p>Broker 的顯示Bar。</p>
+        <p class="extra-note">包含：<br />
+          ChocolateBar<br />
+          ChocolateBar_Options    </p></td>
+    <td><a href="http://www.wowace.com/addons/chocolatebar/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_BagFu</td>
+    <td>&nbsp;</td>
+    <td>包包容量。</td>
+    <td><a href="http://www.wowace.com/addons/broker_bagfu/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_uClock</td>
+    <td>&nbsp;</td>
+    <td>小時鐘內建鬧鐘及日曆按鈕。</td>
+    <td><a href="http://www.wowace.com/addons/broker-uclock/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_Cuerrencyflow</td>
+    <td>&nbsp;</td>
+    <td>追蹤交易用點數或徽章。</td>
+    <td><a href="http://www.wowace.com/addons/broker_currencyflow/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_CPU</td>
+    <td>&nbsp;</td>
+    <td>插件CPU及Memory使用率監控。</td>
+    <td><a href="http://www.curse.com/addons/wow/brokercpu" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_DurabilityInfo</td>
+    <td>&nbsp;</td>
+    <td>裝備耐用度。</td>
+    <td><a href="http://www.wowace.com/addons/broker_durabilityinfo/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Arcana_ExperienceBroker</td>
+    <td>&nbsp;</td>
+    <td>經驗值。(加成時間、升級時間估計)</td>
+    <td><a href="http://www.wowinterface.com/downloads/info14690-ArcanasExperienceBroker.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_Factions</td>
+    <td>&nbsp;</td>
+    <td>聲望監控。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>FuBar_FuXPFu</td>
+    <td>△</td>
+    <td>美化經驗條、聲望條。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>Broker Group</td>
+    <td>&nbsp;</td>
+    <td>隊伍拾取狀態、擲骰紀錄。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>HeyFu</td>
+    <td>△</td>
+    <td>密語整合。</td>
+    <td><a href="http://www.wowace.com/addons/fu-bar_hey-fu/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_LocationFu</td>
+    <td>△</td>
+    <td>區域資訊。(等級、座標、建議區域)</td>
+    <td><a href="http://www.wowinterface.com/downloads/info11439-Broker_Location.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_MicroMenu</td>
+    <td>&nbsp;</td>
+    <td>系統效能監控以及文字表示系統小選單。</td>
+    <td><a href="http://www.wowace.com/addons/broker_micromenue/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_SocialState</td>
+    <td>&nbsp;</td>
+    <td>朋友、公會資訊。</td>
+    <td><a href="http://www.wowinterface.com/downloads/info11440-Broker_SocialState.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>FuBar_QuestsFu</td>
+    <td>&nbsp;</td>
+    <td>任務監控。(自動任務追蹤、任務進度通報)<br />
+        <span class="notice"> (追蹤列表沒內建的好用，請手動取消追蹤列表的功能)</span></td>
+    <td><a href="http://www.wowace.com/addons/fu-bar_quests-fu/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>FuBar_RestFu</td>
+    <td>&nbsp;</td>
+    <td>各角色休息加成資訊。</td>
+    <td><a href="http://www.wowace.com/addons/fubar_restfu/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group">
+    <td>Broker_Volume</td>
+    <td>&nbsp;</td>
+    <td>音量控制。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>BugSack</td>
+    <td>&nbsp;</td>
+    <td>顯示!Buggrabber的內容。<br />
+      (以Broker方式呈現，預設為小地圖的小按鈕)</td>
+    <td><a href="http://www.wowace.com/addons/bugsack/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Chatter</td>
+    <td>&nbsp;</td>
+    <td>改良聊天視窗。(我拿掉了一些會改變外觀的功能)</td>
+    <td><a href="http://www.wowace.com/addons/chatter/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ClassLoot</td>
+    <td>△</td>
+    <td>提供部份裝備(多為10/25副本)比較適合哪個職業的評比。(避免抓馬)</td>
+    <td><a href="http://www.wowace.com/addons/classloot/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Combuctor</td>
+    <td>△</td>
+    <td><p>整合包包、物品搜尋。紀錄各角色包包和銀行的內容。<br />
+    (缺點是視窗大小調整比較不便)</p>
+        <p class="extra-note">包含：<br />
+          Combuctor<br />
+          Combuctor_Config<br />
+          Combuctor_Sets<br />
+BagBrother</p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info8113-Combuctor.html" target="_blank">＠</a>, <a href="http://www.curse.com/addons/wow/combuctor" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DBM</td>
+    <td>&nbsp;</td>
+    <td><p>副本警報系統。(戰場也有)<span class="notice"><br />
+      (5.0後已經將以前版本的副本移除，如果有需要請自行到網站找)</span></p>
+      <p class="extra-note">包含：<br />
+        DBM-Core<br />
+        DBM-DefaultSkin<br />
+        DBM-GUI<br />
+        DBM-HeartofFear<br />
+        DBM-MogushanVaults<br />
+        DBM-Pandaria<br />
+        DBM-Party-MoP<br />
+        DBM-PvP<br />
+        DBM-Scenario-MoP<br />
+        DBM-TerraceofEndlessSpring<br />
+      DBM-WorldEvents</p></td>
+    <td><a href="http://www.curse.com/addons/wow/deadly-boss-mods" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>DoTimer</td>
+    <td>&nbsp;</td>
+    <td><p>各式法術的倒數計時監控。</p>
+      <p class="extra-note">包含：<br />
+        DoTimer<br />
+        DoTimer_Options</p></td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/do-timer.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>EnsidiaFails</td>
+    <td>&nbsp;</td>
+    <td>團隊副本失誤統計及報告。<span class="notice">（這個UI會在團隊王打完之後報告哪些人犯錯，如果你不想報告，建議你關掉，或是/ef把廣播頻道改成自己）</span></td>
+    <td><a href="http://www.wowace.com/addons/ensidiafails/" target="_blank">＠</a></td>
+    <td>/ef</td>
+  </tr>
+  <tr>
+    <td>Examiner</td>
+    <td>&nbsp;</td>
+    <td>改良觀察視窗。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/examiner.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Fizzle</td>
+    <td>&nbsp;</td>
+    <td>在個人裝備視窗(C)的裝備格子顯示穿上的裝備的耐用度。</td>
+    <td><a href="http://www.wowace.com/addons/fizzle/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>FlightMap</td>
+    <td>&nbsp;</td>
+    <td>地圖標注飛行點。飛行計時器。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/flight-map.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>FuBar</td>
+    <td>&nbsp;</td>
+    <td>資訊工具列addon。(由Data Broker取代)</td>
+    <td><a href="http://www.wowace.com/search/?search=Fubar" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>GearScoreLite</td>
+    <td>&nbsp;</td>
+    <td>簡易評估游標對象的裝備等級。</td>
+    <td><a href="http://wow.curseforge.com/addons/gearscorelite/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>Grid</td>
+    <td>&nbsp;</td>
+    <td>極簡方格式Raid UnitFrames addon。(以下addon必備)</td>
+    <td><a href="http://www.wowace.com/search/?search=Grid" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridAutoFrameSize</td>
+    <td>&nbsp;</td>
+    <td>按照環境或人數自動調整Grid的大小或樣式。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridClickSets</td>
+    <td>&nbsp;</td>
+    <td>設定滑鼠點擊Grid自動施放什麼法術。</td>
+    <td><a href="http://www.wowace.com/addons/gridclicksets/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridIndicatorSideIcons</td>
+    <td>&nbsp;</td>
+    <td>在每個格子的四邊加入一個指示標記。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridManaBars</td>
+    <td>&nbsp;</td>
+    <td>顯示魔力、能量、符能、怒氣條。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridSideIndicators</td>
+    <td>&nbsp;</td>
+    <td>在每個格子的四個角落加入指示標記。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridStatusHots</td>
+    <td>&nbsp;</td>
+    <td>提供Hot狀態監控。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridStatusMissingBuffs</td>
+    <td>&nbsp;</td>
+    <td>提供缺少Buff狀態監控。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridStatusRaidDebuff</td>
+    <td>&nbsp;</td>
+    <td>提供Raid中各Boss會發生的Debuff狀態監控。
+      <p class="extra-note">包含：<br />
+        GridStatusRaidDebuff<br />
+        GridStatusRD_BC<br />
+        GridStatusRD_WotLK<br />
+    </p></td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridStatusRaidIcons</td>
+    <td>&nbsp;</td>
+    <td>提供Raid標記監控。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>GridStatusThreat</td>
+    <td>&nbsp;</td>
+    <td>提供威脅值狀態監控。</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>HandyNotes</td>
+    <td>&nbsp;</td>
+    <td>大地圖標示工具。<br />
+    (取代壞掉的Cartographer_Notes)</td>
+    <td><a href="http://www.wowace.com/addons/handynotes/" target="_blank">＠</a></td>
+    <td>/handynotes</td>
+  </tr>
+  <tr>
+    <td class="delete">IHML</td>
+    <td class="delete">？</td>
+    <td class="delete">提供一些每日任務或是副本使用物品的巨集。<br />
+    (但是3.x之後好像就不好用了)</td>
+    <td class="delete"><a href="http://www.wowace.com/addons/ihml/" target="_blank">＠</a></td>
+    <td class="delete">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InFlight</td>
+    <td>&nbsp;</td>
+    <td>飛行計時器。</td>
+    <td><a href="http://www.wowinterface.com/downloads/info11178-InFlight.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InFlight_Load</td>
+    <td>&nbsp;</td>
+    <td>用來載入InFlight、大地圖標示鳥點。<br />
+    (需要Cartographer或HandyNotes)</td>
+    <td>＠</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>InspectEquip</td>
+    <td>&nbsp;</td>
+    <td>顯示個人或觀察視窗的裝備等級和出處整理列表。</td>
+    <td><a href="http://www.wowace.com/addons/inspect-equip/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ItemRack</td>
+    <td>&nbsp;</td>
+    <td><p>換裝管理系統。提供單一個裝備位置的快速替換工具列。</p>
+    <p class="extra-note">包含：<br />
+    ItemRack<br />
+    ItemRackOptions</p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info4148.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td>LibPeriodicTable-3.1</td>
+    <td>。</td>
+    <td><p>提供遊戲中各種物品資料的公式。<br />
+        (因為沒很多addon用到，所以以load on demand模式，省點記憶體) </p>
+      <p class="extra-note">包含：<br />
+        LibPeriodicTable-3.1<br />
+        LibPeriodicTable-3.1-AutoBar<br />
+        LibPeriodicTable-3.1-ClassSpell<br />
+        LibPeriodicTable-3.1-Consumable<br />
+        LibPeriodicTable-3.1-CurrencyItems<br />
+        LibPeriodicTable-3.1-Gear<br />
+        LibPeriodicTable-3.1-GearSet<br />
+        LibPeriodicTable-3.1-InstanceLoot<br />
+        LibPeriodicTable-3.1-InstanceLootHeroic<br />
+        LibPeriodicTable-3.1-Misc<br />
+        LibPeriodicTable-3.1-Reputation<br />
+        LibPeriodicTable-3.1-Tradeskill<br />
+        LibPeriodicTable-3.1-TradeskillLevels<br />
+        LibPeriodicTable-3.1-TradeskillResultMats</p></td>
+    <td><a href="http://www.wowace.com/addons/libperiodictable-3-1/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Mapster</td>
+    <td>&nbsp;</td>
+    <td>強化世界地圖視窗。(大小、顯示未探索區域)</td>
+    <td><a href="http://www.wowace.com/addons/mapster/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Mendeleev</td>
+    <td>△</td>
+    <td>顯示物品的用途、出處。(內容來自LibPeriodicTable)</td>
+    <td><a href="http://www.wowace.com/addons/mendeleev/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>MikScrollingBattleText</td>
+    <td>&nbsp;</td>
+    <td><p>改良畫面中央的跳出戰鬥文字訊息(Scrolling Battle Text)。並提供一些特效發動的提醒。</p>
+    <p class="extra-note">包含：<br />
+    MikScrollingBattleText<br />
+    MSBTOptions</p></td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/mik-scrolling-battle-text.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>NeedToKnow</td>
+    <td>&nbsp;</td>
+    <td>可自訂的狀態監控條。</td>
+    <td><a href="http://www.curse.com/addons/wow/need-to-know" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Omen</td>
+    <td>&nbsp;</td>
+    <td>威脅值監視。</td>
+    <td><a href="http://www.wowace.com/addons/omen-threat-meter/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>OmniCC</td>
+    <td>&nbsp;</td>
+    <td><p>提供快捷列的法術CD倒數。</p>
+    <p class="extra-note">包含：<br />
+    OmniCC<br />
+    OmniCC_Options</p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info4836.html" target="_blank">＠</a></td>
+    <td>/occ</td>
+  </tr>
+  <tr class="delete">
+    <td>Ovale</td>
+    <td>&nbsp;</td>
+    <td>丁丁救星。一步一步告訴你傷害循環，協助你打出最佳傷害值。(僅限DPS天賦)</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/ovale.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>PassLoot</td>
+    <td>&nbsp;</td>
+    <td><p>按照你自己事先設定好的規則，自動幫你貪/需/分解。</p>
+        <p class="extra-note">包含：<br />
+          PassLoot<br />
+    PassLoot_Atlasloot</p></td>
+    <td><a href="http://www.wowace.com/search/?search=Passloot" target="_blank">＠</a></td>
+    <td>/passloot</td>
+  </tr>
+  <tr>
+    <td>Pet Theory</td>
+    <td>&nbsp;</td>
+    <td>神奇寶貝介面輔助。</td>
+    <td><a href="http://www.wowace.com/addons/pet-theory/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+ <tr>
+    <td>PitBull4</td>
+    <td>&nbsp;</td>
+    <td><p>改良頭像框架(Unite Frames)。</p>
+      <p>設計方法：先建立一個新的樣式，然後把想要使用這個樣式的框架(如隊伍、玩家、目標)選擇使用這個新的樣式，然後再去修改新樣式的設定，就可以即時在畫面上看到改變的樣子。<br />
+        <span class="notice">(與EnigmaUnitFrames擇一使用即可)</span></p>
+      <p class="extra-note">包含：<br />
+        PitBull4 (核心) <br />
+        PitBull4_Aggro<br />
+        PitBull4_Aura<br />
+        PitBull4_Background<br />
+        PitBull4_BlankSpace<br />
+        PitBull4_Border<br />
+        PitBull4_CastBar<br />
+        PitBull4_CastBarLatency<br />
+        PitBull4_CombatFader<br />
+        PitBull4_CombatIcon<br />
+        PitBull4_CombatText<br />
+        PitBull4_ComboPoints<br />
+        PitBull4_DogTagTexts<br />
+        PitBull4_DruidManaBar<br />
+        PitBull4_Eclipse<br />
+        PitBull4_ExperienceBar<br />
+        PitBull4_HappinessIcon<br />
+        PitBull4_HealthBar<br />
+        PitBull4_HideBlizzard<br />
+        PitBull4_Highlight<br />
+        PitBull4_HolyPower<br />
+        PitBull4_HostilityFader<br />
+        PitBull4_LeaderIcon<br />
+        PitBull4_LuaTexts<br />
+        PitBull4_ManaSpark<br />
+        PitBull4_MasterLooterIcon<br />
+        PitBull4_Portrait<br />
+        PitBull4_PowerBar<br />
+        PitBull4_PvPIcon<br />
+        PitBull4_RaidTargetIcon<br />
+        PitBull4_RangeFader<br />
+        PitBull4_ReadyCheckIcon<br />
+        PitBull4_ReputationBar<br />
+        PitBull4_RestIcon<br />
+        PitBull4_RoleIcon<br />
+        PitBull4_Runes<br />
+        PitBull4_SoulShards<br />
+        PitBull4_Sounds<br />
+        PitBull4_ThreatBar<br />
+        PitBull4_Totems<br />
+        PitBull4_VisualHeal<br />
+        PitBull4_VisualHeal5<br />
+      PitBull4_VoiceIcon</p></td>
+    <td><a href="http://www.wowace.com/addons/pitbull4/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>PlayerLinkMenu</td>
+    <td>&nbsp;</td>
+    <td>增強聊天視窗在別人名字按右鍵的選單。<br />
+    (目前沒有中文化，但是可以用)</td>
+    <td><a href="http://www.curse.com/addons/wow/player_link_menu" target="_blank">＠</a>, <a href="http://wow.curseforge.com/addons/player_link_menu/" target="_blank">＠</a></td>
+    <td>/plm</td>
+  </tr>
+  <tr>
+    <td>Postal</td>
+    <td>&nbsp;</td>
+    <td>改良郵件系統。可以紀錄名字、分身、好友、公會。右鍵直接把東西放到信箱裡。</td>
+    <td><a href="http://www.wowace.com/addons/postal/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Prat</td>
+    <td>&nbsp;</td>
+    <td><p>改良聊天視窗。</p>
+      <p class="extra-note">包含：<br />
+        Prat-3.0<br />
+        Prat-3.0_HighCPUUsageModules<br />
+    Prat-3.0_Libraries</p></td>
+    <td><a href="http://www.wowace.com/addons/prat-3-0/" target="_blank">＠</a></td>
+    <td>/prat</td>
+  </tr>
+  <tr>
+    <td>Quartz</td>
+    <td>&nbsp;</td>
+    <td>施法條改良。</td>
+    <td><a href="http://www.wowace.com/addons/quartz/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RaidAlerter</td>
+    <td>&nbsp;</td>
+    <td>組隊或團隊時提供警報、團隊檢查(藥水、buff、到場)。<br />
+      (團隊中只有隊長、副手才會發佈訊息。隊伍中則會自動選擇由誰發佈訊息，但還是可能有重複發佈的現象。<span class="notice">在畫面正中央上方的小條bar，點左鍵開關，右鍵設定</span>)</td>
+    <td><a href="http://bbs.ngacn.cc/read.php?tid=4178588" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>CT_RaidTracker</td>
+    <td>&nbsp;</td>
+    <td>追蹤團隊的拾取紀錄。</td>
+    <td><a href="http://wowbox.yatta.com.tw/bbs/viewtopic.php?f=84&amp;t=12229" target="_blank">＠</a></td>
+    <td>/rt, /rt o </td>
+  </tr>
+  <tr>
+    <td>RatingBuster</td>
+    <td>&nbsp;</td>
+    <td>顯示裝備對於目前裝備的詳細屬性差異值。<br />
+      (國產addon)</td>
+    <td><a href="http://www.wowace.com/addons/rating-buster/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>Recount</td>
+    <td>&nbsp;</td>
+    <td>傷害量、治療量、擊殺、失誤等等戰鬥數據的統計工具。</td>
+    <td><a href="http://www.wowace.com/addons/recount/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>RecountDeathTrack</td>
+    <td>？</td>
+    <td>提供Recount死亡追蹤的功能，要開total bar並點total bar。</td>
+    <td><a href="http://www.wowace.com/addons/recount-death-track/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="group-delete">
+    <td>RecountGuessedAbsorbs</td>
+    <td>△</td>
+    <td>提供Recount吸收傷害的數值統計。(Recount已內建)</td>
+    <td><a href="http://www.wowace.com/addons/recountguessedabsorbs/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>ReforgeLite</td>
+    <td>&nbsp;</td>
+    <td>根據設定的屬性比重提供重鑄建議。</td>
+    <td><a href="http://www.wowace.com/addons/reforgelite/" target="_blank">＠</a></td>
+    <td>/reforge</td>
+  </tr>
+  <tr>
+    <td>SeriousBuffTimers</td>
+    <td>△</td>
+    <td>讓系統預設的Buff顯示較詳細的時間。</td>
+    <td><a href="http://www.wowace.com/addons/serious-buff-timers/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SellJunk</td>
+    <td>&nbsp;</td>
+    <td>一鍵賣垃圾。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/sell-junk.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SexyMap</td>
+    <td>&nbsp;</td>
+    <td>改良及美化小地圖。</td>
+    <td><a href="http://www.wowace.com/addons/sexymap/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SharedMedia</td>
+    <td>。</td>
+    <td>提供LibSharedMedia一些額外的貼圖素材。<br />
+      (我有自己拿掉了一些沒用到的東西)</td>
+    <td><a href="http://www.wowace.com/addons/sharedmedia/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>simpleMinimap</td>
+    <td>&nbsp;</td>
+    <td>改良小地圖。改變外框、大小、位置、管理小地圖按鈕。</td>
+    <td><a href="http://www.wowace.com/addons/simple-minimap/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Skada Damage Meter</td>
+    <td>&nbsp;</td>
+    <td><p>傷害量、治療量等戰鬥數據的統計工具。</p>
+      <p class="extra-note">包含：<br />
+        Skada<br />
+        SkadaCC<br />
+        SkadaDamage<br />
+        SkadaDamageTaken<br />
+        SkadaDeaths<br />
+        SkadaDebuffs<br />
+        SkadaDispels<br />
+        SkadaEnemies<br />
+        SkadaHealing<br />
+        SkadaPower<br />
+      SkadaThreat</p></td>
+    <td><a href="http://www.wowace.com/addons/skada/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>EN_UnitFrames</td>
+    <td>&nbsp;</td>
+    <td><p>改良傳統的頭像框架(Unite Frames)。主要是讓血條和buff/debuff的顯示更明顯，還有一些微調，可以透過/euf指令下去設定。(我也有拿掉一些可不裝的東西)<br />
+        <span class="notice">(與PitBull擇一使用即可，這個addon預設為disable)</span></p>    </td>
+    <td><a href="http://www.wowace.com/addons/en_unitframes/" target="_blank">＠</a></td>
+    <td>/euf</td>
+  </tr>
+  <tr class="delete">
+    <td>SyUnitFrame<br />
+      (簡單頭像增強)</td>
+    <td>&nbsp;</td>
+    <td><p>改良傳統的頭像框架(Unite Frames)。主要是讓血條和buff/debuff的顯示更明顯，還有一些微調，沒有設定介面。<br />
+      <span class="notice">(與PitBull擇一使用即可，這個addon預設為disable)</span></p></td>
+    <td><a href="http://wowbox.meetgee.com/bbs/viewtopic.php?t=15866" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>SpecialEvents-2.0</td>
+    <td>。</td>
+    <td><p>提供遊戲中各種Event的整理和應用。 </p>
+      <p class="extra-note">包含：<br />
+        SpecialEvents-Aura-2.0<br />
+        SpecialEvents-Bags-2.0<br />
+        SpecialEventsEmbed<br />
+        SpecialEvents-Equipped-2.0<br />
+        SpecialEvents-LearnSpell-2.0<br />
+        SpecialEvents-Loot-1.0<br />
+        SpecialEvents-Mail-2.0<br />
+        SpecialEvents-Mount-2.0<br />
+        SpecialEvents-Movement-2.0</p></td>
+    <td><a href="http://www.wowace.com/addons/specialeventsembed/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>StatusBars2</td>
+    <td>&nbsp;</td>
+    <td><p>在畫面中央偏下提供一組bar顯示player, target, pet的HP/MP/aura和施法條。提供快速簡便的資訊。
+      (預設disable)<span class="notice">(5.0經網友修正，但無法設定)</span></p>    </td>
+    <td><a href="http://www.wowinterface.com/downloads/info21506-Statusbars2forMOPmonkschishardsembersfuryholypowerorbsrunecombosMaelstromWeapon.html" target="_blank">＠</a>, <a href="http://www.curse.com/addons/wow/statusbars2" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Talented</td>
+    <td>&nbsp;</td>
+    <td><p>改良天賦視窗，可以事先輸入範本或是從wowhead匯入範本，然後再套用。<br />
+        <span class="notice">(5.0新版天賦已不需要)</span></p>
+      <p class="extra-note">包含：<br />
+      Talented (主要addon) <br />
+      Talented_GlyphFrame (雕紋介面)<br />
+      Talented_SpecTabs (各系標籤) </p></td>
+    <td><a href="http://www.wowace.com/addons/talented/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TipTac</td>
+    <td>&nbsp;</td>
+    <td><p>改善tooltip的外觀、內容、位置。</p>
+    <p class="extra-note">包含：<br />
+    TipTac<br />
+    TipTacOptions</p></td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/tip-tac.aspx" target="_blank">＠</a></td>
+    <td>/tip, /tiptac </td>
+  </tr>
+  
+  <tr>
+    <td>TipTacTalents</td>
+    <td>&nbsp;</td>
+    <td>讓TipTac可以顯示游標目標的天賦。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/tip-tac-talents.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>XLoot</td>
+    <td>&nbsp;</td>
+    <td>改善拾取視窗。</td>
+    <td><a href="http://www.wowace.com/addons/xloot/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>XLootMonitor</td>
+    <td>&nbsp;</td>
+    <td>整理及顯示&quot;最近&quot;的拾取紀錄。需要XLoot。</td>
+    <td><a href="http://www.wowace.com/addons/xloot-monitor/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#33CC99">
+    <td colspan="5" class="white-large">[Trade Skill Addons]</td>
+  </tr>
+  <tr bgcolor="#6699FF" class="white-large">
+    <td><div align="center">[NAME]</div></td>
+    <td><div align="center">[MARK]</div></td>
+    <td><div align="center">[DESCRIPTION]</div></td>
+    <td><div align="center">[LINK]</div></td>
+    <td><div align="center">[Note]</div></td>
+  </tr>
+  <tr>
+    <td>AckisRecipeList</td>
+    <td>&nbsp;</td>
+    <td>尋找沒學到的配方。 <span class="notice">(進入遊戲後第一次開專業視窗可能會頓一下，如果還沒需要用到，可以先不啟用)</span></td>
+    <td><a href="http://www.wowace.com/addons/arl/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Ara_Broker_Tradeskills</td>
+    <td>&nbsp;</td>
+    <td>交易技能追蹤。分身交易技能、冷卻時間。</td>
+    <td><a href="http://www.wowinterface.com/downloads/info12108-AraBrokerTradeskills.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>FishingAce</td>
+    <td>&nbsp;</td>
+    <td>釣魚助手。</td>
+    <td><a href="http://www.wowace.com/addons/fishing-ace/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>FishermansFriend</td>
+    <td>&nbsp;</td>
+    <td>釣魚助手。</td>
+    <td><a href="http://www.wowace.com/addons/FishermansFriend/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TradeskillInfo</td>
+    <td>&nbsp;</td>
+    <td>交易技能介面提供更多訊息。</td>
+    <td><a href="http://www.wowace.com/addons/tradeskill-info/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>GatherMate2</td>
+    <td>&nbsp;</td>
+    <td>採集助手。</td>
+    <td><a href="http://www.wowace.com/addons/gathermate2/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>GatherMate2_Data</td>
+    <td>&nbsp;</td>
+    <td>提供GatherMate資料，基本上每週更新。</td>
+    <td><a href="http://www.wowace.com/addons/gathermate2_data/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#33CC99">
+    <td colspan="5" class="white-large">[Class Specified Addons]</td>
+  </tr>
+  <tr bgcolor="#6699FF" class="white-large">
+    <td><div align="center">[NAME]</div></td>
+    <td><div align="center">[MARK]</div></td>
+    <td><div align="center">[DESCRIPTION]</div></td>
+    <td><div align="center">[LINK]</div></td>
+    <td><div align="center">[Note]</div></td>
+  </tr>
+  <tr>
+    <td>Decursive</td>
+    <td>☆</td>
+    <td>打地鼠解debuff。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/decursive.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>FloTotemBar</td>
+    <td>☆△</td>
+    <td>薩滿圖騰列。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/flo-totem-bar.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>HealBot</td>
+    <td>☆</td>
+    <td>打地鼠治療。</td>
+    <td><a href="http://www.curse.com/addons/wow/heal-bot-continued" target="_blank">＠</a></td>
+    <td>/hb</td>
+  </tr>
+  <tr>
+    <td>LockSmith</td>
+    <td>☆</td>
+    <td>盜賊開鎖助手。</td>
+    <td><a href="http://www.wowace.com/addons/lock-smith/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>NugEnergy</td>
+    <td>☆△</td>
+    <td>能量監控。(用StatusBars2取代)</td>
+    <td><a href="http://www.wowinterface.com/downloads/info9099-NugEnergy.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Numen</td>
+    <td>☆△</td>
+    <td>薩滿圖騰列。</td>
+    <td><a href="http://www.wowace.com/addons/numen/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>PallyPower</td>
+    <td>☆</td>
+    <td><p>超好用聖騎士施放祝福小幫手。(現在不需要了)</p></td>
+    <td><a href="http://www.wowinterface.com/downloads/info6370-PallyPower.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>RangeDisplay</td>
+    <td>&nbsp;</td>
+    <td><p>距離監測器。(實用性不高，淘汰) </p>
+      <p class="extra-note">包含：<br />
+        RangeDisplay<br />
+        RangeDisplay_Options</p></td>
+    <td><a href="http://www.wowace.com/addons/range-display/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>RunePack</td>
+    <td>☆</td>
+    <td>改善DK的符文顯示。</td>
+    <td><a href="http://www.wowinterface.com/downloads/info11708-RunePack.html" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>SmartRes2</td>
+    <td>☆</td>
+    <td><p>復活監控及智慧復活。</p></td>
+    <td><a href="http://www.wowace.com/addons/smartres2/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TankPoints</td>
+    <td>☆</td>
+    <td>顯示裝備的坦克屬性評分。</td>
+    <td><a href="http://www.wowace.com/addons/tank-points/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>TauntMaster</td>
+    <td>☆</td>
+    <td>坦克仇恨助手。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/tauntmaster.aspx" target="_blank">＠</a></td>
+    <td>/tm</td>
+  </tr>
+  <tr bgcolor="#33CC99">
+    <td colspan="5" class="white-large">[Minor Addons]</td>
+  </tr>
+  <tr bgcolor="#6699FF" class="white-large">
+    <td><div align="center">[NAME]</div></td>
+    <td><div align="center">[MARK]</div></td>
+    <td><div align="center">[DESCRIPTION]</div></td>
+    <td><div align="center">[LINK]</div></td>
+    <td><div align="center">[Note]</div></td>
+  </tr>
+  <tr>
+    <td>Chronicle</td>
+    <td>&nbsp;</td>
+    <td>筆記本。可在Broker上開啟。</td>
+    <td><a href="http://www.curse.com/addons/wow/chronicle" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>JPack</td>
+    <td>△</td>
+    <td>整理背包和銀行，並提供自動堆疊。(預設disabled)
+      <p class="extra-note">包含：<br />
+        JPack<br />
+        JPack_ex (在包包視窗提供一個整理的按鈕) </p></td>
+    <td><a href="http://wow.curseforge.com/addons/jpack/" target="_blank">＠</a></td>
+    <td>/jp</td>
+  </tr>
+  <tr>
+    <td>LFGForwarder</td>
+    <td>&nbsp;</td>
+    <td>讓你在野外也可以收到組隊頻道的訊息。</td>
+    <td><a href="http://wow.curse.com/downloads/wow-addons/details/lfgforwarder.aspx" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>MogIt</td>
+    <td>&nbsp;</td>
+    <td><p>塑型助手 </p>
+      <p class="extra-note">包含：<br />
+        MogIt\<br />
+        MogIt_Accessories\<br />
+        MogIt_Cloth\<br />
+        MogIt_Leather\<br />
+        MogIt_Mail\<br />
+        MogIt_OneHanded\<br />
+        MogIt_Other\<br />
+        MogIt_Plate\<br />
+        MogIt_Ranged\<br />
+        MogIt_TwoHanded\</p></td>
+    <td><a href="http://www.curse.com/addons/wow/mogit" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="delete">
+    <td>Notebook</td>
+    <td>△</td>
+    <td>筆記本。<span class="notice">(4.0.1會出錯 我手動改了)</span></td>
+    <td><a href="http://www.wowinterface.com/downloads/fileinfo.php?id=4544" target="_blank">＠</a></td>
+    <td>/notebook</td>
+  </tr>
+  <tr>
+    <td>SyncFriends</td>
+    <td>&nbsp;</td>
+    <td>同步朋友清單。</td>
+    <td><a href="http://www.wowace.com/addons/syncfriends/" target="_blank">＠</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>TomTom</td>
+    <td>&nbsp;</td>
+    <td>導航助手。除了提供導航功能給其他addon使用之外，也內建基本的導航功能，像是....找屍體。<br />
+      (推薦指令/wayback可以設一個導航點在現在的位置)</td>
+    <td><a href="http://www.wowinterface.com/downloads/info7032-TomTom.html" target="_blank">＠</a></td>
+    <td>/way help </td>
+  </tr>
+</table>
+</body>
+</html>
